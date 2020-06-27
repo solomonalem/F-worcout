@@ -1,13 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Comic+Neue:wght@400;700&family=Lato:wght@300;400;700&family=Satisfy&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+/*====================NAV - BAR ============*/
+.container {
+  margin: 1rem 8rem;
+  height: 100vh;
+}
+h2 {
+  font-family: "lato";
+}
+.navbar {
+  height: 4rem;
+  width: 100vw;
+  background-color: rgb(45, 19, 116);
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-logo {
+  color: rgb(19, 197, 129);
+  text-decoration: none;
+  font-family: "Aladin";
+  font-size: 2rem;
+  margin-left: 2rem;
+  margin-top: -1.7rem;
+  padding-bottom: 3rem;
+}
+.navbar-logo:hover {
+  color: rgb(13, 219, 140);
+}
+.navbar-logo img {
+  font-size: 3rem;
+  height: 3rem;
+  width: 3rem;
+  color: wheat;
+}
+.navbar-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+.navbar-items li {
+  list-style: none;
+}
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  margin: 0rem 2rem;
+}
+.navbar-link:hover,
+.navbar-link:focus {
+  color: rgb(184, 182, 182);
+}
+/*======= CREATE - EXERCISE =====*/
+form {
+  width: 80%;
+}
+.form-item {
+  display: grid;
+  /* background-color: rgb(240, 187, 187); */
+  margin: 0.5rem;
+}
+.form-item label {
+  margin: 0.3rem 0;
+  font-family: "lato", sans-serif;
+  font-weight: 600;
+}
+.date-picker {
+  width: 10rem;
+  color: blue;
+}
+.form-item .form-control {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid rgb(207, 207, 207);
+}
+.form-item .form-control:focus {
+  border-radius: 0.2rem;
+  border: 2px solid rgba(78, 64, 199, 0.507);
+  outline: none;
+}
+.form-item select {
+  padding: 0.5rem 0;
+  border-radius: 0.2rem;
+  border: 1px solid rgb(170, 170, 170);
+}
+
+.btn {
+  margin: 1rem 0;
+  width: 10rem;
+  height: 2.5rem;
+  background-color: rgb(59, 29, 143);
+  color: white;
+  border-radius: 0.3rem;
+  border: none;
+  font-weight: 700;
+}
+.btn:hover {
+  background-color: rgb(73, 42, 158);
+}
+/* =========== LIST ===== */
+.thead-light {
+  width: 80%;
+}
+.table {
+  width: 80%;
+}
+tbody {
+  padding: 1rem;
+  margin: 1rem;
+  font-family: "lato";
+}
+thead {
+  text-align: left;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+td {
+  padding: 0.3rem 0rem;
+  padding-right: 1rem;
+
+  outline: none;
+}
+/*-- footer -*/
+.footer {
+  background-color: rgb(43, 40, 56);
+  height: 4rem;
+  width: 100vw;
+  text-align: center;
+  align-items: center;
+}
+.footer li {
+  color: rgb(185, 184, 184);
+  text-decoration: none;
+  list-style: none;
+  padding: 1rem;
 }
