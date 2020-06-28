@@ -2,8 +2,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:wght@400;600;700&display=swap");
 
+html,
 body {
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -18,19 +20,19 @@ code {
 }
 /*====================NAV - BAR ============*/
 .container {
-  margin: 1rem 8rem;
+  margin: 1rem 10%;
   height: 100vh;
 }
 h2 {
   font-family: "Nunito";
 }
 .icon-delete {
-  color: rgb(190, 190, 190);
+  color: rgb(202, 202, 202);
   font-size: 1.1rem;
   padding: 0rem 2rem;
 }
 .icon-delete:hover {
-  color: rgb(221, 99, 99);
+  color: rgb(224, 35, 35);
 }
 .icon-edit {
   color: rgb(57, 125, 204);
@@ -44,22 +46,33 @@ h2 {
   height: 4rem;
   width: 100vw;
   background-color: rgb(45, 19, 116);
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+}
+.toggle {
+  float: right;
+  font-size: 2rem;
+  color: white;
+  margin: 0.5rem 0.7rem;
+  display: none;
+}
+#check {
+  display: none;
 }
 .navbar span {
   color: rgb(189, 189, 189);
-  margin-right: 0.8rem;
-  font-size: 2.6rem;
+  margin: 0.8rem;
+  font-size: 2.8rem;
+  padding-top: 0.3rem;
 }
 .navbar-logo {
   color: rgb(19, 197, 129);
   text-decoration: none;
   font-family: "Aladin";
-  font-size: 2rem;
-  margin-left: 2rem;
-  margin-top: -1.7rem;
-  padding-bottom: 3rem;
+  font-size: 2.4rem;
+
+  margin-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 .navbar-logo:hover {
   color: rgb(13, 219, 140);
@@ -71,13 +84,14 @@ h2 {
   color: wheat;
 }
 .navbar-items {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  float: right;
   margin: 1rem;
 }
 .navbar-items li {
   list-style: none;
+}
+.navbar-item {
+  display: inline-block;
 }
 .navbar-link {
   text-decoration: none;
@@ -94,7 +108,6 @@ form {
 }
 .form-item {
   display: grid;
-  /* background-color: rgb(240, 187, 187); */
   margin: 0.5rem;
 }
 .form-item label {
@@ -139,22 +152,38 @@ form {
 /*  */
 .table {
   width: 100%;
+  align-items: center;
+  /* margin: 0 10%; */
+  border-collapse: collapse;
 }
+
 tbody {
   padding: 1rem;
   margin: 1rem;
   font-family: "lato";
+  width: 100%;
 }
-thead {
+.table-head {
   text-align: left;
-  margin-right: 1rem;
-  padding: 1rem;
+
+  margin: 0.4rem;
+  background-color: rgb(202, 216, 255);
 }
 td {
-  padding: 0.2rem 0rem;
-  padding-right: 1rem;
+  padding: 0.4rem 0rem;
+  padding-left: 4rem;
   outline: none;
+  border-bottom: 1px solid rgb(233, 233, 233);
+
+  color: rgb(58, 58, 58);
 }
+th {
+  color: rgb(30, 81, 158);
+  font-family: "lato";
+  height: 2.3rem;
+  padding-left: 4rem;
+}
+
 /*-- footer -*/
 .footer {
   background-color: rgb(43, 40, 56);
@@ -168,4 +197,83 @@ td {
   text-decoration: none;
   list-style: none;
   padding: 1rem;
+}
+
+/* /*---------------media querys*---------------*-/ */
+@media all and (max-width: 960px) {
+  td {
+    padding-left: 1.5rem;
+  }
+  th {
+    padding-left: 1.5rem;
+  }
+  .navbar-link {
+    margin: 0rem 1rem;
+  }
+}
+@media all and (max-width: 725px) {
+  .container {
+    width: 90vw;
+    margin: 5vw;
+  }
+}
+@media all and (max-width: 633px) {
+  .container {
+    width: 100vw;
+    margin: 0;
+  }
+
+  .navbar-logo {
+    font-size: 2.1rem;
+  }
+
+  .toggle {
+    display: block;
+  }
+  .navbar-items {
+    width: 100%;
+    position: fixed;
+    background-color: rgb(61, 61, 110);
+    margin: 0;
+    height: 90vh;
+    width: 50%;
+    right: -100%;
+    display: block;
+    align-items: center;
+    margin: 0.3rem 0;
+    transition: all 0.3s;
+  }
+  #check:checked ~ .navbar-items {
+    right: 0;
+  }
+  .navbar-item {
+    display: block;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .navbar-link {
+  }
+}
+@media all and (max-width: 569px) {
+  .icon-delete {
+    font-size: 1rem;
+    padding: 0rem 0.3rem;
+  }
+  .icon-edit {
+    padding-right: 0.3rem;
+    font-size: 1rem;
+  }
+  .navbar {
+    width: 100vw;
+  }
+  .btn {
+    margin-right: 20vw;
+    width: 60vw;
+    height: 2.5rem;
+    background-color: rgb(59, 29, 143);
+    color: white;
+    border-radius: 0.3rem;
+    border: none;
+    font-weight: 700;
+  }
 }

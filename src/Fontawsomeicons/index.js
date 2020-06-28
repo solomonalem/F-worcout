@@ -4,6 +4,7 @@ import {
   faRunning,
   faEdit,
   faTrashAlt,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faRunning, faEdit, faTrashAlt);
+library.add(faRunning, faBars, faEdit, faTrashAlt);

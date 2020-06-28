@@ -40,7 +40,7 @@ export default class ExercisesList extends Component {
       <div className="container">
         <h2>Logged Exercises</h2>
         <table className="table">
-          <thead className="thead-light">
+          <thead className="table-head">
             <tr>
               <th>Username</th>
               <th>Description</th>
